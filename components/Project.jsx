@@ -60,9 +60,10 @@ export default function Project() {
         style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
       >
         {projects.map((project) => (
+          // KODE BARU (Sudah Responsif di HP)
           <div
             key={project.id}
-            className="sm:w-[320px] shrink-0 snap-start group bg-[#161923] border border-white/5 rounded-xl overflow-hidden hover:border-blue-500/20 transition-all duration-300 shadow-lg"
+            className="w-[85vw] sm:w-[320px] shrink-0 snap-start group bg-[#161923] border border-white/5 rounded-xl overflow-hidden hover:border-blue-500/20 transition-all duration-300 shadow-lg"
           >
             {/* Image (Tinggi diperkecil dari h-52 ke h-40 agar card compact) */}
             <div className="relative h-40 bg-gray-950 overflow-hidden">
