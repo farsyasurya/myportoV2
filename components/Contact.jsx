@@ -154,7 +154,7 @@ return (
       {/* Kiri: Links (Github & Email) */}
       <div className="flex items-center gap-4 text-gray-400">
         <a 
-          href="https://github.com/usernamemu" // Ganti dengan link github-mu
+          href="https://github.com/farsyasurya" // Ganti dengan link github-mu
           target="_blank" 
           rel="noopener noreferrer" 
           className="hover:text-blue-400 transition"
@@ -163,7 +163,7 @@ return (
         </a>
         <span className="text-white/10">|</span>
         <a 
-          href="mailto:emailmu@gmail.com" // Ganti dengan email-mu
+          href="mailto:suryafarsya16@gmail.com" // Ganti dengan email-mu
           className="hover:text-blue-400 transition"
         >
           Email

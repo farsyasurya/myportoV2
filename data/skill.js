@@ -2,12 +2,12 @@ const techstack = [
   {
     id: 1,
     name: "Next.js",
-    image: "https://iili.io/KBfG4kB.th.png",
+    image: "https://iili.io/C0UL9qP.th.jpg",
   },
   {
     id: 2,
     name: "React",
-    image: "https://iili.io/KBfG4kB.th.png",
+    image: "https://iili.io/KBfYkS1.th.png",
   },
   {
     id: 3,
@@ -17,7 +17,7 @@ const techstack = [
   {
     id: 4,
     name: "JavaScript",
-    image: "https://iili.io/KBfG4kB.th.png",
+    image: "https://iili.io/C0Ue5P4.png",
   },
   {
     id: 5,
@@ -27,27 +27,32 @@ const techstack = [
   {
     id: 6,
     name: "Vue.js",
-    image: "https://iili.io/KBfG4kB.th.png",
+    image: "https://iili.io/C0USx1f.th.png",
   },
   {
     id: 7,
     name: "Node.js",
-    image: "https://iili.io/KBfG4kB.th.png",
+    image: "https://iili.io/C0Ur1rG.th.png",
   },
   {
     id: 8,
     name: "Express",
-    image: "https://iili.io/KBfG4kB.th.png",
+    image: "https://iili.io/C0UPQ4e.th.png",
   },
   {
     id: 9,
     name: "Docker",
-    image: "https://iili.io/KBfG4kB.th.png",
+    image: "https://iili.io/C0UDHZv.th.jpg",
   },
   {
     id: 10,
     name: "PostgreSQL",
-    image: "https://iili.io/KBfG4kB.th.png",
+    image: "https://iili.io/KBfjKdJ.th.png",
+  },
+    {
+    id: 11,
+    name: "Supabase",
+    image: "https://iili.io/KBKIwSj.th.png",
   },
 ];
 

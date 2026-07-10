@@ -7,9 +7,9 @@ const profile = {
 
   location: "Kampar, Riau",
 
-  photo: "/profile.png",
+  photo: "/far6.png",
 
-  cv: "/cv.pdf",
+  cv: "https://drive.google.com/file/d/1c4QvHPzEnjLIP7bA5Paj_fAUAnPSAS9c/view",
 };
 
 export default profile;
