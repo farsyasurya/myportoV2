@@ -10,28 +10,32 @@ export default function TechStackMarquee({ skills }) {
   // Duplicate the list so the loop feels seamless
   const items = [...skills, ...skills];
 
-  useEffect(() => {
-    const el = scrollRef.current;
-    if (!el) return;
+useEffect(() => {
+  const el = scrollRef.current;
+  if (!el) return;
 
-    let frameId;
-    const speed = 0.6; // px per frame, tweak for faster/slower
+  let frameId;
+  let position = 0;
+  const speed = 1;
 
-    const step = () => {
-      if (!isPaused && el) {
-        el.scrollLeft += speed;
+  const step = () => {
+    if (!isPaused) {
+      position += speed;
 
-        // When we've scrolled past the first copy, snap back to start
-        if (el.scrollLeft >= el.scrollWidth / 2) {
-          el.scrollLeft -= el.scrollWidth / 2;
-        }
+      if (position >= el.scrollWidth / 2) {
+        position = 0;
       }
-      frameId = requestAnimationFrame(step);
-    };
+
+      el.scrollLeft = position;
+    }
 
     frameId = requestAnimationFrame(step);
-    return () => cancelAnimationFrame(frameId);
-  }, [isPaused]);
+  };
+
+  frameId = requestAnimationFrame(step);
+
+  return () => cancelAnimationFrame(frameId);
+}, [isPaused]);
 
   return (
     <div
