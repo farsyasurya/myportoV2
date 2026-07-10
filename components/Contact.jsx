@@ -40,44 +40,43 @@ ${form.message}`;
     window.open(url, '_blank');
   };
 
-  return (
-    <section
-      id="contact"
-      className="border-t border-white/5 py-24 px-6"
-    >
-      <div className="max-w-2xl mx-auto">
+return (
+    <>
+  <section
+    id="contact"
+    className="max-w-7xl mx-auto border-t border-white/5 py-20 px-6 md:px-12"
+  >
+    {/* Menggunakan max-w-xl agar form tidak terlalu lebar di layar besar & tetap rapi */}
+    <div className="max-w-xl mx-auto">
 
-        <div className="text-center mb-12">
-
-          <div className="inline-flex p-3 rounded-xl bg-blue-500/10 text-blue-400 mb-4">
-            <Mail size={22} />
-          </div>
-
-          <h2 className="text-4xl font-bold text-white">
-            Let's Work Together
-          </h2>
-
-          <p className="text-gray-400 mt-4">
-            Interested in collaborating? Fill out the form below and I'll
-            reply via WhatsApp.
-          </p>
-
+      {/* Header Section */}
+      <div className="flex flex-col items-center text-center mb-10">
+        <div className="p-2 bg-blue-500/10 rounded-lg text-blue-400 mb-3 w-fit">
+          <Mail size={20} />
         </div>
+        <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight">
+          Let&apos;s Work Together
+        </h2>
+        <p className="text-gray-400 mt-2 text-sm md:text-base max-w-md">
+          Interested in collaborating? Fill out the form below and I&apos;ll reply via WhatsApp.
+        </p>
+      </div>
 
-        <div className="bg-[#161923] border border-white/5 rounded-2xl p-8 space-y-5">
+      {/* Form Card (Padding disesuaikan p-5 di HP, p-6 di Desktop) */}
+      <div className="bg-[#161923] border border-white/5 rounded-xl p-5 md:p-6 space-y-4 shadow-lg">
 
-          {/* Panggilan */}
-
-          <div>
-            <label className="text-sm text-gray-300 mb-2 block">
+        {/* Baris Panggilan & Nama (Sejajar di desktop/tablet, vertikal di HP) */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div className="sm:col-span-1">
+            <label className="text-xs font-medium text-gray-300 mb-1.5 block">
               Panggilan
             </label>
-
             <select
               name="title"
               value={form.title}
               onChange={handleChange}
-              className="w-full rounded-xl bg-[#0F1117] border border-white/10 px-4 py-3 text-white outline-none focus:border-blue-500"
+              // py-3 dikurangi menjadi py-2 untuk mengecilkan inputan
+              className="w-full text-sm rounded-lg bg-[#0F1117] border border-white/10 px-3 py-2 text-white outline-none focus:border-blue-500/50 transition"
             >
               <option>Tn.</option>
               <option>Bapak</option>
@@ -87,69 +86,97 @@ ${form.message}`;
             </select>
           </div>
 
-          {/* Nama */}
-
-          <div>
-            <label className="text-sm text-gray-300 mb-2 block">
+          <div className="sm:col-span-2">
+            <label className="text-xs font-medium text-gray-300 mb-1.5 block">
               Nama
             </label>
-
             <input
               type="text"
               name="name"
               value={form.name}
               onChange={handleChange}
               placeholder="Masukkan nama..."
-              className="w-full rounded-xl bg-[#0F1117] border border-white/10 px-4 py-3 text-white outline-none focus:border-blue-500"
+              className="w-full text-sm rounded-lg bg-[#0F1117] border border-white/10 px-3 py-2 text-white outline-none focus:border-blue-500/50 transition"
             />
           </div>
-
-          {/* WA */}
-
-          <div>
-            <label className="text-sm text-gray-300 mb-2 block">
-              Nomor WhatsApp
-              <span className="text-gray-500"> (Opsional)</span>
-            </label>
-
-            <input
-              type="text"
-              name="phone"
-              value={form.phone}
-              onChange={handleChange}
-              placeholder="08xxxxxxxxxx"
-              className="w-full rounded-xl bg-[#0F1117] border border-white/10 px-4 py-3 text-white outline-none focus:border-blue-500"
-            />
-          </div>
-
-          {/* Pesan */}
-
-          <div>
-            <label className="text-sm text-gray-300 mb-2 block">
-              Pesan
-            </label>
-
-            <textarea
-              rows={5}
-              name="message"
-              value={form.message}
-              onChange={handleChange}
-              placeholder="Tulis pesan..."
-              className="w-full rounded-xl bg-[#0F1117] border border-white/10 px-4 py-3 text-white outline-none focus:border-blue-500 resize-none"
-            />
-          </div>
-
-          <button
-            onClick={handleSubmit}
-            className="w-full flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-500 rounded-xl py-3 font-semibold transition"
-          >
-            <Send size={18} />
-            Kirim ke WhatsApp
-          </button>
-
         </div>
 
+        {/* Input WhatsApp */}
+        <div>
+          <label className="text-xs font-medium text-gray-300 mb-1.5 block">
+            Nomor WhatsApp <span className="text-gray-500 font-normal">(Opsional)</span>
+          </label>
+          <input
+            type="text"
+            name="phone"
+            value={form.phone}
+            onChange={handleChange}
+            placeholder="08xxxxxxxxxx"
+            className="w-full text-sm rounded-lg bg-[#0F1117] border border-white/10 px-3 py-2 text-white outline-none focus:border-blue-500/50 transition"
+          />
+        </div>
+
+        {/* Input Pesan */}
+        <div>
+          <label className="text-xs font-medium text-gray-300 mb-1.5 block">
+            Pesan
+          </label>
+          <textarea
+            rows={4} // Dikurangi dari 5 ke 4 agar lebih compact
+            name="message"
+            value={form.message}
+            onChange={handleChange}
+            placeholder="Tulis pesan..."
+            className="w-full text-sm rounded-lg bg-[#0F1117] border border-white/10 px-3 py-2 text-white outline-none focus:border-blue-500/50 transition resize-none"
+          />
+        </div>
+
+        {/* Tombol Kirim */}
+        <button
+          onClick={handleSubmit}
+          // py-3 dikurangi ke py-2.5 agar tombol lebih tipis dan proporsional
+          className="w-full flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-500 text-white rounded-lg py-2.5 text-sm font-medium transition active:scale-[0.98]"
+        >
+          <Send size={16} />
+          Kirim ke WhatsApp
+        </button>
+
       </div>
-    </section>
-  );
+
+    </div>
+  </section>
+  {/* ... batas akhir </section> contact ... */}
+
+  {/* Footer Section */}
+  <footer className="max-w-7xl mx-auto px-6 md:px-12 py-8 border-t border-white/5 text-xs text-gray-500">
+    <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+      
+      {/* Kiri: Links (Github & Email) */}
+      <div className="flex items-center gap-4 text-gray-400">
+        <a 
+          href="https://github.com/usernamemu" // Ganti dengan link github-mu
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="hover:text-blue-400 transition"
+        >
+          Github
+        </a>
+        <span className="text-white/10">|</span>
+        <a 
+          href="mailto:emailmu@gmail.com" // Ganti dengan email-mu
+          className="hover:text-blue-400 transition"
+        >
+          Email
+        </a>
+      </div>
+
+      {/* Kanan: Copyright */}
+      <div className="text-center sm:text-right font-mono">
+        &copy; {new Date().getFullYear()} MFS. All rights reserved.
+      </div>
+
+    </div>
+  </footer>
+  </>
+);
 }
