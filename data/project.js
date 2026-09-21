@@ -63,6 +63,33 @@ const projects = [
     demo: "https://fylo.vercel.app",
     featured: true,
   },
+
+    {
+    id: 6,
+    title: "Frintab",
+    slug: "frintab",
+    description: "Social media platform that allows users to share posts, interact with friends, and communicate in real time.",
+    image: "https://frintabku.netlify.app/frintab.png",
+    tech: ["React", "Firebase", "Firestrore", "Tailwind CSS"],
+    github: "https://github.com/yourusername/frintab",
+    demo: "https://frintabku.netlify.app/login",
+    featured: true,
+  },
+
+  {
+    id: 7,
+    title: "Taskify",
+    slug: "taskify",
+    description: "Social media platform that allows users to share posts, interact with friends, and communicate in real time.",
+    image: "https://fartaskify.netlify.app/my-logo.png",
+    tech: ["React", "Firebase", "Firestrore", "Tailwind CSS"],
+    github: "https://github.com/yourusername/taskify",
+    demo: "https://fartaskify.netlify.app/login",
+    featured: true,
+  },
 ];
 
 export default projects;
+
+
+

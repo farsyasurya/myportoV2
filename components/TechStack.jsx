@@ -58,9 +58,7 @@ useEffect(() => {
       {items.map((skill, i) => (
         <div
           key={`${skill.id}-${i}`}
-          // 1. Mengubah padding dari p-6 menjadi p-3 (atau p-4 jika ingin sedikit lebih longgar)
-          // 2. Mengurangi gap antar konten dari gap-3 menjadi gap-2
-          className="flex flex-col items-center justify-center gap-2 bg-[#161923] border border-white/5 hover:border-violet-500/30 hover:bg-[#1c202f] transition-all duration-300 rounded-xl p-3.5 group shrink-0"
+          className="flex flex-col items-center justify-center gap-2 bg-white dark:bg-[#161923] border border-slate-200/80 dark:border-white/5 hover:border-blue-500/40 hover:bg-slate-50 dark:hover:bg-[#1c202f] transition-all duration-300 rounded-xl p-3.5 group shrink-0 shadow-sm"
         >
           {/* 3. Memperkecil ukuran container gambar dari w-12 h-12 (48px) menjadi w-8 h-8 (32px) */}
           <div className="relative w-8 h-8">
@@ -73,7 +71,7 @@ useEffect(() => {
             />
           </div>
           {/* 4. Memperkecil ukuran teks dari text-sm menjadi text-xs */}
-          <span className="text-gray-300 text-xs font-medium whitespace-nowrap">{skill.name}</span>
+          <span className="text-slate-700 dark:text-gray-300 text-xs font-medium whitespace-nowrap">{skill.name}</span>
         </div>
       ))}
     </div>
